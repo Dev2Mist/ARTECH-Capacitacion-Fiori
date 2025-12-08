@@ -9,11 +9,19 @@ sap.ui.define([
   return Controller.extend("artech.capacitacion.fiori.controller.App", {
     onMostrarSaludo() {
 
-      const input = this.getView().byId("inputUsuario");
+      // Obtengo la vista asociada al controlador
+      const oView = this.getView();
 
-      if (input.getValue().length === 0) MessageToast.show("¡Has ingresado un input vacío!");
-      else {
-        MessageToast.show(`Hola ${input.getValue()}`);
+      // Ahora, de esa vista obtengo el elemento con ID inputUsuario
+      const oInput = oView.byId("inputUsuario");
+
+      // Si el "value" del input ingresado por el usuario tiene un lenght === 0...
+      if (oInput.getValue().length > 0) {
+        // Convoco al objeto MessageToast y muestro por pantalla el mensaje
+        MessageToast.show(`Hola ${oInput.getValue()}, bienvenido a mi aplicación UI5 :)`);
+      } else {
+        // Convoco al objeto MessageToast que pase por parametro a la arrow function y utilizo el método show para mostrar un mensaje por pantalla
+        MessageToast.show("¡Has ingresado un input vacío!");
       }
 
     }
