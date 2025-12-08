@@ -1,13 +1,13 @@
-sap.ui.define(["sap/ui/core/UIComponent"], function (UIComponent) {
+sap.ui.define(["sap/ui/core/UIComponent"], (UIComponent) => {
   "use strict";
 
-  return UIComponent.extend("mi.app.Component", {
+  return UIComponent.extend("artech.capacitacion.fiori.Component", {
     metadata: {
+      interfaces: ["sap.ui.core.IASyncContentCreation"],
       manifest: "json",
     },
 
-    init: function () {
-      // Llama a la función init del padre
+    init() {
       UIComponent.prototype.init.apply(this, arguments);
     },
   });

@@ -1,25 +1,46 @@
 {
-  "_version": "1.12.0",
+  "_version": "1.65.0",
   "sap.app": {
-    "id": "mi.app",
+    "id": "artech.capacitacion.fiori",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
     "type": "application",
-    "title": "Mi Primera App",
     "applicationVersion": {
       "version": "1.0.0"
     }
   },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
   "sap.ui5": {
     "dependencies": {
-      "minUI5Version": "1.100.0",
+      "minUI5Version": "1.108.0",
       "libs": {
+        "sap.ui.core": {},
         "sap.m": {}
       }
     },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "artech.capacitacion.fiori.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
+        }
+      }
+    },
     "rootView": {
-      "viewName": "mi.app.view.App",
+      "viewName": "artech.capacitacion.fiori.view.App",
       "type": "XML",
-      "async": true,
-      "id": "app"
+      "id": "app",
+      "async": true
     }
   }
 }

@@ -1,0 +1,20 @@
+# Dependencias de Node (Cuando usemos tooling más adelante)
+node_modules/
+package-lock.json
+
+# Archivos de logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Carpetas de build (Donde SAP genera la app compilada)
+dist/
+resources/
+
+# Configuración de editor local (Opcional, pero recomendado)
+.vscode/
+.idea/

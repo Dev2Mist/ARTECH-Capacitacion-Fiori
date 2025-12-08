@@ -1,18 +1,6 @@
-<mvc:View
-    controllerName="mi.app.controller.App"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
-    xmlns="sap.m">
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="artech.capacitacion.fiori.controller.App" displayBlock="true">
+    
+<!-- Este boton tiene un atributo 'press' que llama a la funcion onDisplayHelloWorld definida en el controlador de esta vista -->
+    <Button text="{i18n>saludo}" press=".onDisplayHelloWorld"></Button>
 
-    <App>
-        <Page title="Inicio Limpio">
-            <content>
-                <VBox class="sapUiSmallMargin">
-                    <Label text="Tu Nombre:" />
-                    <Input id="miInput" placeholder="Escribe aquí..." />
-                    <Button text="Saludar" press=".onPulsar" type="Emphasized" />
-                </VBox>
-            </content>
-        </Page>
-    </App>
 </mvc:View>
