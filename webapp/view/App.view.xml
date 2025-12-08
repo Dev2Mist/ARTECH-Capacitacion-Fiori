@@ -6,11 +6,20 @@
 
     <App>
 
-        <Page title="Saludo Fiori">
+        <Page title="Inicio">
 
             <content>
-                <VBox class="SapUiSmallMargin">
+                
+                <VBox 
+                    class="sapUiSmallMargin"
+                    alignItems="Center"
+                    justifyContent="Center"
+                    height="100%">
 
+                <Title text="¡Bienvenido a mi App!"
+                        titleStyle="H2"
+                        class="sapUiMediumMarginBottom" />
+                
                     <Label text="Ingresa tu nombre: " />
 
                     <Input id="inputUsuario" placeholder="Escribí acá..." width="300px" />

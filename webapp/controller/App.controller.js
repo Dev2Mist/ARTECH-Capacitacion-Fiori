@@ -15,10 +15,12 @@ sap.ui.define([
       // Ahora, de esa vista obtengo el elemento con ID inputUsuario
       const oInput = oView.byId("inputUsuario");
 
+      const sInput = oInput.getValue();
+
       // Si el "value" del input ingresado por el usuario tiene un lenght === 0...
-      if (oInput.getValue().length > 0) {
+      if (sInput.length > 0) {
         // Convoco al objeto MessageToast y muestro por pantalla el mensaje
-        MessageToast.show(`Hola ${oInput.getValue()}, bienvenido a mi aplicación UI5 :)`);
+        MessageToast.show(`Hola ${sInput}, bienvenido a mi aplicación UI5 :)`);
       } else {
         // Convoco al objeto MessageToast que pase por parametro a la arrow function y utilizo el método show para mostrar un mensaje por pantalla
         MessageToast.show("¡Has ingresado un input vacío!");
