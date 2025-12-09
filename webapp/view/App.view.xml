@@ -1,6 +1,192 @@
 <mvc:View controllerName="artech.capacitacion.fiori.controller.App"
+    xmlns:layout="sap.ui.layout"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:uxap="sap.uxap"
+    xmlns:f="sap.f"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    </Page>
+    <!-- Vista principal con controlador 'ejercicio2.controller.App' -->
+    <App id="app">
+        <!-- Página principal sin cabecera (showHeader="false") -->
+        <Page id="page" showHeader="false">
+            <!-- Layout tipo ObjectPage (sap.uxap) para detalle enriquecido -->
+            <uxap:ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true">
+
+                <!-- Título principal del ObjectPage -->
+                <!-- Nombre completo dinámico -->
+                <!-- Marca como favorito -->
+                <!-- Marca como marcado -->
+                <!-- Muestra los iconos de marcado -->
+                <!-- No marca cambios -->
+                <!-- No muestra selector de título -->
+                <!-- Fecha de nacimiento -->
+                <!-- Foto de perfil -->
+                <!-- Imagen circular -->
+                <!-- Título no siempre visible -->
+                <!-- Subtítulo no siempre visible -->
+                <!-- No mostrar placeholder -->
+                <uxap:headerTitle>
+                    <uxap:ObjectPageHeader id="headerForTest"
+                        objectTitle="{profile>/name} {profile>/lastName}"  
+                        markFavorite="true"                               
+                        markFlagged="true"                                
+                        showMarkers="true"                                
+                        markChanges="false"                               
+                        showTitleSelector="false"                         
+                        objectSubtitle="{profile>/birthDate}"            
+                        objectImageURI="{profile>/photo}"                
+                        objectImageShape="Circle"                          
+                        isObjectTitleAlwaysVisible="false"                
+                        isObjectSubtitleAlwaysVisible="false"             
+                        showPlaceholder="false">
+    
+                        <!-- Botones de acción en el header -->
+                        <uxap:actions>
+
+                            <!-- Botón editar con evento -->
+                            <uxap:ObjectPageHeaderActionButton icon="sap-icon://edit" 
+                                press=".onEditProfile"/>                    
+                        </uxap:actions>
+                    </uxap:ObjectPageHeader>
+                </uxap:headerTitle>
+
+                <!-- Contenido del header debajo del título -->
+                <uxap:headerContent>
+                    <layout:VerticalLayout>
+                        <!-- Rol del usuario -->
+                        <Label text="{profile>/role}"/>
+                        
+                        <!-- Link de correo -->
+                        <Link text="{profile>/email}"                         
+                            href="mailto:{profile>/email}"/>
+                        <layout:HorizontalLayout>
+
+                            <!-- Iconos de redes sociales con evento press -->
+                            <Image id="appImageGitHub" 
+                                height="30px" 
+                                width="30px"
+                                press=".onLinkImage"
+                                src="../assets/image/GitHub.jpeg"/>
+                            <Image id="appImageLinkedin"
+                                height="28px" 
+                                width="30px"
+                                press=".onLinkImage"
+                                src="../assets/image/Linkedin.png"/>
+                        </layout:HorizontalLayout>
+                    </layout:VerticalLayout>
+
+                    <layout:VerticalLayout>
+                        <!-- Etiqueta internacionalizada -->
+                        <Label text="{i18n>profileCompletion}"/>
+
+                        <!-- Indicador de progreso al 100% -->
+                        <ProgressIndicator
+                                percentValue="100"
+                                displayValue="100%"
+                                showValue="true"
+                                state="Success"/>
+                    </layout:VerticalLayout>
+                </uxap:headerContent>
+
+                <!-- Secciones principales del ObjectPage -->
+                <uxap:sections>
+
+                    <!-- Sección "Sobre mí" -->
+                    <uxap:ObjectPageSection title="{i18n>aboutMe}">
+
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection>
+                                
+                                <!-- Bloques de contenido dentro de la subsección -->
+                                <uxap:blocks>
+
+                                    <!-- ScrollContainer para permitir scroll en contenido -->
+                                    <ScrollContainer height="100%" width="100%">
+                                        <f:GridContainer id="appGridContainerRouter" class="sapUiSmallMargin">
+
+                                            <!-- Configuración responsive del grid -->
+                                            <f:layout>
+                                                <f:GridContainerSettings rowSize="84px" columnSize="84px" gap="8px" />
+                                            </f:layout>
+                                            <f:layoutXS>
+                                                <f:GridContainerSettings rowSize="70px" columnSize="70px" gap="8px" />
+                                            </f:layoutXS>
+
+                                            <!-- Tile para experiencia de capacitación -->
+                                            <!-- Header internacionalizado -->
+                                            <!-- Subheader internacionalizado -->
+                                            <GenericTile
+                                                press=".goToTraining"
+                                                header="{i18n>genericTileHeader}"           
+                                                subheader="{i18n>genericTileSubHeader}">   
+
+                                                <layoutData>
+                                                    <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                                                </layoutData>
+
+                                                <!-- Footer internacionalizado -->
+                                                <TileContent unit="Pescar" footer="{i18n>training}">
+
+                                                     <!-- Icono del tile --> 
+                                                    <ImageContent src="sap-icon://chalkboard" />
+                                                </TileContent>
+                                            </GenericTile>
+                                        </f:GridContainer>
+                                    </ScrollContainer>
+                                </uxap:blocks>
+
+                                <uxap:blocks>
+                                    <ScrollContainer height="100%" width="100%">
+                                        <f:GridContainer id="appGridContainerRouterParametera" class="sapUiSmallMargin">
+                                            <f:layout>
+                                                <f:GridContainerSettings rowSize="84px" columnSize="84px" gap="8px" />
+                                            </f:layout>
+                                            <f:layoutXS>
+                                                <f:GridContainerSettings rowSize="70px" columnSize="70px" gap="8px" />
+                                            </f:layoutXS>
+                                            
+                                            <!-- TileContent para mostrar descripción de perfil -->
+                                             <!-- Texto internacionalizado -->
+                                            <TileContent>
+                                                <Text width="200px"
+                                                    text="{i18n>profileDescription}"           
+                                                    class="sapUiSmallMargin"/>
+                                            </TileContent>
+                                        </f:GridContainer>
+                                    </ScrollContainer>
+                                </uxap:blocks>
+
+                                <uxap:blocks>
+                                    <ScrollContainer height="100%" width="100%">
+                                        <f:GridContainer id="appGridContainerRouterParameter" class="sapUiSmallMargin">
+                                            <f:layout>
+                                                <f:GridContainerSettings rowSize="84px" columnSize="84px" gap="8px" />
+                                            </f:layout>
+                                            <f:layoutXS>
+                                                <f:GridContainerSettings rowSize="70px" columnSize="70px" gap="8px" />
+                                            </f:layoutXS>
+
+                                            <!-- Tile para experiencia laboral -->
+                                            <GenericTile
+                                                press=".goToJob"
+                                                header="{i18n>experience}">
+                                                <layoutData>
+                                                    <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                                                </layoutData>
+
+                                                <!-- Footer fijo -->
+                                                <TileContent footer="{i18n>companies}">            
+                                                    <ImageContent src="sap-icon://people-connected" />
+                                                </TileContent>
+                                            </GenericTile>
+                                        </f:GridContainer>
+                                    </ScrollContainer>
+                                </uxap:blocks>
+
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
+                </uxap:sections>
+            </uxap:ObjectPageLayout>
+        </Page>
+    </App>
 </mvc:View>
