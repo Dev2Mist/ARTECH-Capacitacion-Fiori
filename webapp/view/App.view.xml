@@ -26,26 +26,18 @@
                 <!-- No mostrar placeholder -->
                 <uxap:headerTitle>
                     <uxap:ObjectPageHeader id="headerForTest"
-                        objectTitle="{profile>/name} {profile>/lastName}"  
-                        markFavorite="true"                               
-                        markFlagged="true"                                
-                        showMarkers="true"                                
-                        markChanges="false"                               
-                        showTitleSelector="false"                         
-                        objectSubtitle="{profile>/birthDate}"            
-                        objectImageURI="{profile>/photo}"                
-                        objectImageShape="Circle"                          
-                        isObjectTitleAlwaysVisible="false"                
-                        isObjectSubtitleAlwaysVisible="false"             
+                        objectTitle="{profile>/name} {profile>/lastName}"
+                        markFavorite="true"
+                        markFlagged="true"
+                        showMarkers="true"
+                        markChanges="false"
+                        showTitleSelector="false"
+                        objectSubtitle="{profile>/birthDate}"
+                        objectImageURI="{profile>/photo}"
+                        objectImageShape="Circle"
+                        isObjectTitleAlwaysVisible="false"
+                        isObjectSubtitleAlwaysVisible="false"
                         showPlaceholder="false">
-    
-                        <!-- Botones de acción en el header -->
-                        <uxap:actions>
-
-                            <!-- Botón editar con evento -->
-                            <uxap:ObjectPageHeaderActionButton icon="sap-icon://edit" 
-                                press=".onEditProfile"/>                    
-                        </uxap:actions>
                     </uxap:ObjectPageHeader>
                 </uxap:headerTitle>
 
@@ -111,7 +103,7 @@
                                                 <f:GridContainerSettings rowSize="70px" columnSize="70px" gap="8px" />
                                             </f:layoutXS>
 
-                                            <!-- Tile para experiencia de capacitación -->
+                                            <!-- Tile para Hobbies -->
                                             <!-- Header internacionalizado -->
                                             <!-- Subheader internacionalizado -->
                                             <GenericTile
@@ -127,7 +119,8 @@
                                                 <TileContent >
 
                                                      <!-- Icono del tile --> 
-                                                    <ImageContent src="sap-icon://chalkboard" />
+                                                    <ImageContent
+                                                        src="sap-icon://person-placeholder" />
                                                 </TileContent>
                                             </GenericTile>
                                         </f:GridContainer>

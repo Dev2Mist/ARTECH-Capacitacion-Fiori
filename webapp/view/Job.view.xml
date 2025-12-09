@@ -1,0 +1,21 @@
+<mvc:View
+    controllerName="artech.capacitacion.fiori.controller.Job"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Experiencia Profesional" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <VBox class="sapUiSmallMargin">
+
+                <Title text="Detalle del Puesto" level="H2" class="sapUiMediumMarginBottom" />
+
+                <Label text="Empresa:" design="Bold" />
+                <Text text="{job>/companyName}" class="sapUiSmallMarginBottom" />
+
+                <Label text="Tecnologías:" design="Bold" />
+                <Text text="SAPUI5, JavaScript, XML, JSON" />
+
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

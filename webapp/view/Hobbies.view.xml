@@ -3,7 +3,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
 
-    <Page title="Mis Cursos y Hobbies" showNavButton="true" navButtonPress=".onNavBack">
+    <Page title="Hobbies y pasatiempos" showNavButton="true" navButtonPress=".onNavBack">
         <content>
             <List headerText="Mis Hobbies" class="sapUiSmallMarginTop">
                 <StandardListItem title="Piano"
@@ -18,6 +18,9 @@
                 <StandardListItem title="Volleyball"
                     description="Disfruto mucho del deporte, sobre todo del volleyball. Este año no pude continuar con mi actividad, pero tengo pensado volver a jugar en el club Temperley"
                     icon="sap-icon://physical-activity" />
+                <StandardListItem title="Cocinar"
+                    description="Me gusta mucho cocinar, es divertido y siempre disfruto compartiendo una buena comida"
+                    icon="sap-icon://BusinessSuiteInAppSymbols/icon-top-recipe" />
             </List>
         </content>
     </Page>

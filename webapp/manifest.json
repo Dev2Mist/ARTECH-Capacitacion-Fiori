@@ -80,16 +80,17 @@
         {
           "name": "RouteApp",
           "pattern": ":?query:",
-          "target": [
-            "TargetApp"
-          ]
+          "target": ["TargetApp"]
         },
         {
           "name": "RouteHobbies",
           "pattern": "hobbies",
-          "target": [
-            "TargetHobbies"
-          ]
+          "target": ["TargetHobbies"]
+        },
+        {
+          "name": "RouteJob",
+          "pattern": "Job/{company}",
+          "target": ["TargetJob"]
         }
       ],
       "targets": {
@@ -100,6 +101,10 @@
         "TargetHobbies": {
           "id": "Hobbies",
           "name": "Hobbies"
+        },
+        "TargetJob": {
+          "id": "Job",
+          "name": "Job"
         }
       }
     },
