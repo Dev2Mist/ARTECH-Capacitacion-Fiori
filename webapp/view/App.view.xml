@@ -116,9 +116,9 @@
                                                 </layoutData>
 
                                                 <!-- Footer internacionalizado -->
-                                                <TileContent >
+                                                <TileContent footer="{i18n>tileContentMembers}">
 
-                                                     <!-- Icono del tile --> 
+                                                    <!-- Icono del tile --> 
                                                     <ImageContent
                                                         src="sap-icon://person-placeholder" />
                                                 </TileContent>
