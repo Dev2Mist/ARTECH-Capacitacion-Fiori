@@ -9,11 +9,79 @@
 
                 <Title text="Detalle del Puesto" level="H2" class="sapUiMediumMarginBottom" />
 
-                <Label text="Empresa:" design="Bold" />
-                <Text text="{job>/companyName}" class="sapUiSmallMarginBottom" />
+                <Label text="Empresa: {job>/companyName}" design="Bold" />
+                <HBox alignItems="Center" class="sapUiMediumMarginBottom">
 
-                <Label text="Tecnologías:" design="Bold" />
-                <Text text="SAPUI5, JavaScript, XML, JSON" />
+                    <Avatar src="../assets/image/artech_logo.jpeg"
+                        displaySize="XL"
+                        displayShape="Square"
+                        class="sapUiSmallMarginEnd" />
+
+                </HBox>
+
+                <Label text="Tecnologías:" design="Bold" class="sapUiMediumMarginTop" />
+
+                <HBox wrap="Wrap" class="sapUiSmallMarginTop">
+
+                    <VBox alignItems="Center" class="sapUiMediumMarginEnd">
+                        <Avatar src="sap-icon://sap-ui5"
+                            displaySize="L"
+                            displayShape="Square"
+                            class="sapUiTinyMarginBottom" />
+                        <Text text="SAPUI5" />
+                    </VBox>
+
+                    <VBox alignItems="Center" class="sapUiMediumMarginEnd">
+                        <Avatar src="sap-icon://syntax"
+                            displaySize="L"
+                            displayShape="Square"
+                            class="sapUiTinyMarginBottom" />
+                        <Text text="JavaScript" />
+                    </VBox>
+
+                    <VBox alignItems="Center" class="sapUiMediumMarginEnd">
+                        <Avatar src="sap-icon://attachment-html"
+                            displaySize="L"
+                            displayShape="Square"
+                            class="sapUiTinyMarginBottom" />
+                        <Text text="XML" />
+                    </VBox>
+
+                    <VBox alignItems="Center" class="sapUiMediumMarginEnd">
+                        <Avatar src="sap-icon://cloud"
+                            displaySize="L"
+                            displayShape="Square"
+                            class="sapUiTinyMarginBottom" />
+                        <Text text="OData" />
+                    </VBox> 
+                    <VBox alignItems="Center"
+                        class="sapUiMediumMarginEnd sapUiSmallMarginBottom">
+                        <Avatar src="sap-icon://database"
+                            displaySize="L"
+                            displayShape="Square"
+                            class="sapUiTinyMarginBottom" />
+                        <Text text="SQL" />
+                    </VBox>
+
+                    <VBox alignItems="Center"
+                        class="sapUiMediumMarginEnd sapUiSmallMarginBottom">
+                        <Avatar src="sap-icon://machine-learning"
+                            displaySize="L"
+                            displayShape="Square"
+                            class="sapUiTinyMarginBottom" />
+                        <Text text="n8n (AI)" />
+                    </VBox>
+
+                    <VBox alignItems="Center"
+                        class="sapUiMediumMarginEnd sapUiSmallMarginBottom">
+                        <Avatar src="sap-icon://source-code"
+                            displaySize="L"
+                            displayShape="Square"
+                            class="sapUiTinyMarginBottom" />
+                        <Text text="ABAP" />
+                    </VBox>
+
+                </HBox>
 
             </VBox>
         </content>
