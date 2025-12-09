@@ -1,0 +1,24 @@
+<mvc:View
+    controllerName="artech.capacitacion.fiori.controller.Hobbies"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Mis Cursos y Hobbies" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <List headerText="Mis Hobbies" class="sapUiSmallMarginTop">
+                <StandardListItem title="Piano"
+                    description="La música es hermosa y me enseñó muchas cosas"
+                    icon="sap-icon://widgets" />
+                <StandardListItem title="Gaming"
+                    description="Disfruto mucho de jugar videojuegos y vivir grandes historias"
+                    icon="sap-icon://keyboard-and-mouse" />
+                <StandardListItem title="Cine"
+                    description="Creo que las películas y series pueden contar historias increíbles"
+                    icon="sap-icon://video" />
+                <StandardListItem title="Volleyball"
+                    description="Disfruto mucho del deporte, sobre todo del volleyball. Este año no pude continuar con mi actividad, pero tengo pensado volver a jugar en el club Temperley"
+                    icon="sap-icon://physical-activity" />
+            </List>
+        </content>
+    </Page>
+</mvc:View>

@@ -115,7 +115,7 @@
                                             <!-- Header internacionalizado -->
                                             <!-- Subheader internacionalizado -->
                                             <GenericTile
-                                                press=".goToTraining"
+                                                press=".goToHobbies"
                                                 header="{i18n>genericTileHeader}"           
                                                 subheader="{i18n>genericTileSubHeader}">   
 
@@ -124,7 +124,7 @@
                                                 </layoutData>
 
                                                 <!-- Footer internacionalizado -->
-                                                <TileContent unit="Pescar" footer="{i18n>training}">
+                                                <TileContent >
 
                                                      <!-- Icono del tile --> 
                                                     <ImageContent src="sap-icon://chalkboard" />

@@ -83,12 +83,23 @@
           "target": [
             "TargetApp"
           ]
+        },
+        {
+          "name": "RouteHobbies",
+          "pattern": "hobbies",
+          "target": [
+            "TargetHobbies"
+          ]
         }
       ],
       "targets": {
         "TargetApp": {
           "id": "App",
           "name": "App"
+        },
+        "TargetHobbies": {
+          "id": "Hobbies",
+          "name": "Hobbies"
         }
       }
     },
