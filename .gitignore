@@ -1,0 +1,17 @@
+# Dependencias (La carpeta pesada)
+node_modules/
+
+# Archivos de log (Basura del sistema)
+npm-debug.log
+yarn-error.log
+
+# Archivos de sistema (Basura de Windows/Mac)
+.DS_Store
+Thumbs.db
+
+# Configuración local de UI5 (a veces contiene rutas locales)
+.ui5/
+ui5-local.yaml
+
+# Archivos de build/distribución (se generan solos)
+dist/
