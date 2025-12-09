@@ -9,7 +9,7 @@
 
                 <Title text="Detalle del Puesto" level="H2" class="sapUiMediumMarginBottom" />
 
-                <Label text="Empresa: {job>/companyName}" design="Bold" />
+                <Label text="Empresa: {job>/companyName}" design="Bold"/>
                 <HBox alignItems="Center" class="sapUiMediumMarginBottom">
 
                     <Avatar src="../assets/image/artech_logo.jpeg"

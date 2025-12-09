@@ -33,7 +33,7 @@
                         markChanges="false"
                         showTitleSelector="false"
                         objectSubtitle="{profile>/birthDate}"
-                        objectImageURI="{profile>/photo}"
+                        objectImageURI="../assets/image/foto_mia.jpg"
                         objectImageShape="Circle"
                         isObjectTitleAlwaysVisible="false"
                         isObjectSubtitleAlwaysVisible="false"
