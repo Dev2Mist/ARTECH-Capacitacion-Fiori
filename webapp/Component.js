@@ -18,6 +18,9 @@ sap.ui.define([
 
             // set the device model
             this.setModel(models.createDeviceModel(), "device");
+            this.setModel(models.createProfileModel().then(oModel => {
+                this.setModel(oModel, "profilePrueba");
+            }))
 
             // enable routing
             this.getRouter().initialize();

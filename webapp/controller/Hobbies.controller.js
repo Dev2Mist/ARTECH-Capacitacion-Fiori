@@ -15,7 +15,7 @@ sap.ui.define(
           // Si no hay historial (ej: recargamos la página aquí), forzamos ir al Inicio
           //TODO: Falta completar la funcionalidad de regresar
           const oRouter = this.getOwnerComponent().getRouter();
-          oRouter.navTo("RouteApp", {}, true);
+          oRouter.navTo("AppRoot", {}, true);
         }
       },
     });

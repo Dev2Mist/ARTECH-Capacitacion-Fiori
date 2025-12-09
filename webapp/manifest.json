@@ -111,7 +111,7 @@
     "rootView": {
       "viewName": "artech.capacitacion.fiori.view.App",
       "type": "XML",
-      "id": "App",
+      "id": "AppRoot",
       "async": true
     }
   }

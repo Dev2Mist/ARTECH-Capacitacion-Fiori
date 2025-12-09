@@ -26,13 +26,13 @@
                 <!-- No mostrar placeholder -->
                 <uxap:headerTitle>
                     <uxap:ObjectPageHeader id="headerForTest"
-                        objectTitle="{profile>/name} {profile>/lastName}"
+                        objectTitle="{profilePrueba>/name} {profilePrueba>/lastName}"
                         markFavorite="true"
                         markFlagged="true"
                         showMarkers="true"
                         markChanges="false"
                         showTitleSelector="false"
-                        objectSubtitle="{profile>/birthDate}"
+                        objectSubtitle="{profilePrueba>/birthDate}"
                         objectImageURI="../assets/image/foto_mia.jpg"
                         objectImageShape="Circle"
                         isObjectTitleAlwaysVisible="false"
@@ -45,11 +45,11 @@
                 <uxap:headerContent>
                     <layout:VerticalLayout>
                         <!-- Rol del usuario -->
-                        <Label text="{profile>/role}"/>
+                        <Label text="{profilePrueba>/role}"/>
                         
                         <!-- Link de correo -->
-                        <Link text="{profile>/email}"                         
-                            href="mailto:{profile>/email}"/>
+                        <Link text="{profilePrueba>/email}"                         
+                            href="mailto:{profilePrueba>/email}"/>
                         <layout:HorizontalLayout>
 
                             <!-- Iconos de redes sociales con evento press -->

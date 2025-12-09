@@ -1,6 +1,7 @@
 sap.ui.define([
     "sap/ui/model/json/JSONModel",
-    "sap/ui/Device"
+    "sap/ui/Device",
+    "artech/capacitacion/fiori/model/models"
 ], 
 function (JSONModel, Device) {
     "use strict";
@@ -14,7 +15,19 @@ function (JSONModel, Device) {
             var oModel = new JSONModel(Device);
             oModel.setDefaultBindingMode("OneWay");
             return oModel;
+        },
+
+        createProfileModel: async function () {
+            const response = await fetch("../model/data.json");
+            const profile = await response.json();
+
+            const oModel = new JSONModel(profile);
+
+            console.log(oModel)
+            return oModel;
         }
+
+
     };
 
 });
